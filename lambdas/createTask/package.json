@@ -1,0 +1,13 @@
+{
+    "name": "create-task-lambda",
+    "version": "1.0.0",
+    "dependencies": {
+        "@aws-sdk/client-dynamodb": "^3.948.0",
+        "@aws-sdk/lib-dynamodb": "^3.948.0",
+        "axios": "^1.13.2",
+        "uuid": "^9.0.1"
+    },
+    "devDependencies": {
+        "@types/uuid": "^11.0.0"
+    }
+}
