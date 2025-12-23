@@ -109,7 +109,7 @@ graph TD
     ```bash
     cd infra
     terraform init
-    terraform apply -var="hf_api_key=YOUR_HUGGING_FACE_KEY"
+    terraform apply -var="hf_api_key=HUGGING_FACE_KEY"
     ```
     *Confirm the deployment by typing `yes`.*
 
