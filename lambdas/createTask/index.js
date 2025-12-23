@@ -62,7 +62,7 @@ exports.handler = async (event) => {
         // HuggingFace router response structure
         const predictedCategory =
             hfResponse?.data?.labels?.[0] ||
-            hfResponse?.data?.[0]?.labels?.[0] ||
+            hfResponse?.data?.[0]?.label ||
             "uncategorized";
 
         const task = {
@@ -81,7 +81,8 @@ exports.handler = async (event) => {
 
         return {
             statusCode: 200,
-            body: JSON.stringify(task),
+            //body:JSON.stringify(task),
+            body: JSON.stringify({ ...task, hfResponse: hfResponse.data[0].label }),
         };
 
     } catch (err) {

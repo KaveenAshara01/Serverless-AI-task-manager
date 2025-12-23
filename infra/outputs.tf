@@ -24,3 +24,7 @@ output "create_task_lambda_arn" {
 output "get_tasks_lambda_arn" {
   value = aws_lambda_function.get_tasks.arn
 }
+output "cognito_user_pool_domain" {
+  description = "Cognito User Pool domain URL for JWT token requests"
+  value       = "https://${aws_cognito_user_pool_domain.user_pool_domain.domain}.auth.${var.aws_region}.amazoncognito.com"
+}
